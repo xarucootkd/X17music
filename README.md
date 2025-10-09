@@ -11,8 +11,9 @@ Classes modelos:
 
 Classes extras:
 
-- Recomendacao (Mostra se os videos está nos mais curtidos)
-- Exibir (Exibe as informações dos objetos)
+- MaisRecentes (Mostra se os musicas/podcast  mais recentes, utilizando a interface Classificavel)
+- Exibir (Exibe as informações dos objetos, utilizando a interface Informacoes)
+- EmAlta (Mostra se o musica/podcast está em alta baseado na classificação)
 
 
 Interfaces:
