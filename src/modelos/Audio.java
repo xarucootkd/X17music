@@ -4,14 +4,26 @@ package modelos;
 public class Audio {
 
     private String nome;
+    private int classificacao;
     private int tempoRestante; // em minutos
-    private double avaliacao;
+    private int anoLancamento;
     private int totalReproducao;
     private int totalAvaliacao;
     private int totalCurtidas;
+    private double avaliacao;
 
 
+    public int getClassificacao() {
+        return classificacao;
+    }
 
+    public int getAnoLancamento() {
+        return anoLancamento;
+    }
+
+    public void setAnoLancamento(int anoLancamento) {
+        this.anoLancamento = anoLancamento;
+    }
 
     public String getNome() {
         return nome;
@@ -30,20 +42,20 @@ public class Audio {
     }
 
     public String getAvaliacao() {
-       int nota = (int) (avaliacao / totalAvaliacao) / 2;
+       double nota = avaliacao / totalAvaliacao;
 
-       if (nota == 1 ) {
-           return "★ ✩ ✩ ✩ ✩";
-       } else if (nota == 2) {
-           return "★ ★ ✩ ✩ ✩";
-       } else if (nota == 3) {
-           return "★ ★ ★ ✩ ✩";
-       } else if (nota == 4) {
-           return "★ ★ ★ ★ ✩";
-       } else if (nota == 5) {
-           return "★ ★ ★ ★ ★";
-       } else {
+       if (nota == 0 ) {
            return "Não tem nenhuma avaliação";
+       } else if (nota < 1.5) {
+           return "★ ✩ ✩ ✩ ✩";
+       } else if (nota < 2.5) {
+           return "★ ★ ✩ ✩ ✩";
+       } else if (nota < 3.5) {
+           return "★ ★ ★ ✩ ✩";
+       } else if (nota < 4.5) {
+           return "★ ★ ★ ★ ✩";
+       } else {
+           return "★ ★ ★ ★ ★";
        }
     }
 

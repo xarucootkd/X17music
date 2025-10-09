@@ -25,23 +25,28 @@ public class Podcast extends Audio implements Classificavel, Informacoes {
         this.descricao = descricao;
     }
 
-    public void Texibir(){
-        System.out.println("Nome: " + getNome());
-        System.out.println("Avaliação: " + getAvaliacao());
-        System.out.println("Curtida: " + getTotalCurtidas());
-        System.out.println("Reproduções: " + getTotalReproducao());
-        System.out.println("Tempo de podcast: " + getTempoRestante() + " minutos");
-    }
 
     @Override
     public int getClassificacao() {
-        return getTotalReproducao();
+        if (getTotalCurtidas() > 1000) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
+    public int getRecentes() {
+        return getAnoLancamento();
     }
 
     @Override
     public void exibirInformacao() {
         System.out.println("Nome: " + getNome());
+        System.out.println("Host: " + getHost());
+        System.out.println("Descrição: " + getDescricao());
         System.out.println("Avaliação: " + getAvaliacao());
+        System.out.println("Ano de lançamento: " + getAnoLancamento());
         System.out.println("Curtida: " + getTotalCurtidas());
         System.out.println("Reproduções: " + getTotalReproducao());
         System.out.println("Tempo de podcast: " + getTempoRestante() + " minutos");

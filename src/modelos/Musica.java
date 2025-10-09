@@ -35,18 +35,16 @@ public class Musica extends Audio implements Classificavel, Informacoes {
 
     @Override
     public int getClassificacao() {
-        return getTotalCurtidas();
+        if (getTotalReproducao() > 10000) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
-    public void exibir() {
-        System.out.println("Nome: " + getNome());
-        System.out.println("Album: " + getAlbum());
-        System.out.println("Artista: " + getAlbum());
-        System.out.println("Gênero: " + getAlbum());
-        System.out.println("Avaliação: " + getAvaliacao());
-        System.out.println("Curtida: " + getTotalCurtidas());
-        System.out.println("Reproduções: " + getTotalReproducao());
-        System.out.println("Tempo de música: " + getTempoRestante() + " minutos");
+    @Override
+    public int getRecentes() {
+        return getAnoLancamento();
     }
 
 
@@ -57,6 +55,7 @@ public class Musica extends Audio implements Classificavel, Informacoes {
         System.out.println("Artista: " + getArtista());
         System.out.println("Gênero: " + getGenero());
         System.out.println("Avaliação: " + getAvaliacao());
+        System.out.println("Ano de lançamento: " + getAnoLancamento());
         System.out.println("Curtida: " + getTotalCurtidas());
         System.out.println("Reproduções: " + getTotalReproducao());
         System.out.println("Tempo de música: " + getTempoRestante() + " minutos");
@@ -68,4 +67,5 @@ public class Musica extends Audio implements Classificavel, Informacoes {
             ᆞM u s i c a sᆞ
         """);
     }
+
 }

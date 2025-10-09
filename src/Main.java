@@ -1,5 +1,6 @@
+import classes_extras.EmAlta;
 import classes_extras.Exibir;
-import classes_extras.Recomendacao;
+import classes_extras.MaisRecentes;
 import modelos.Musica;
 import modelos.Podcast;
 
@@ -14,8 +15,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Recomendacao filtro = new Recomendacao();
+        MaisRecentes filtroRecentes = new MaisRecentes();
         Exibir informacoes = new Exibir();
+        EmAlta filtroEmAlta = new EmAlta();
 
 
         limparTela();
@@ -28,10 +30,11 @@ public class Main {
         musica.setAlbum("Single");
         musica.setArtista("7MZ");
         musica.setGenero("Anime");
+        musica.setAnoLancamento(2021);
         musica.setTempoRestante(2);
-        musica.setAvaliacao(7.7);
         musica.setAvaliacao(9.0);
-        musica.setAvaliacao(8.7);
+        musica.setAvaliacao(8);
+        musica.setAvaliacao(10);
 
         for (int i = 0; i < 113273; i++) {
             musica.curtir();
@@ -46,8 +49,10 @@ public class Main {
         }
 
         informacoes.exibirTitulo(musica);
+        filtroRecentes.maisRecentes(musica);
         informacoes.exibirInformacoes(musica);
-        filtro.maisCurtidos(musica);
+        musica.getClassificacao();
+        filtroEmAlta.emAlta(musica);
 
 
         limparTela();
@@ -58,10 +63,11 @@ public class Main {
         podcast.setNome("LudoCast");
         podcast.setHost("Ludoviajante");
         podcast.setDescricao("Podcast sobre filosofia e ciência");
+        podcast.setAnoLancamento(2025);
         podcast.setTempoRestante(50);
-        podcast.setAvaliacao(8.7);
-        podcast.setAvaliacao(9.3);
-        podcast.setAvaliacao(7.9);
+        podcast.setAvaliacao(3);
+        podcast.setAvaliacao(3);
+        podcast.setAvaliacao(3);
 
 
         for (int i = 0; i < 21737; i++) {
@@ -77,8 +83,11 @@ public class Main {
         }
 
         informacoes.exibirTitulo(podcast);
+        filtroRecentes.maisRecentes(podcast);
         informacoes.exibirInformacoes(podcast);
-        filtro.maisCurtidos(podcast);
+        podcast.getClassificacao();
+        filtroEmAlta.emAlta(podcast);
+
 
 
 
