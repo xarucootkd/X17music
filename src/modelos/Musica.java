@@ -9,29 +9,26 @@ public class Musica extends Audio implements Classificavel, Informacoes {
     private String artista;
     private String genero;
 
-    public String getAlbum() {
-        return album;
+
+    public Musica (String nome, String album, String artista ,String genero, int anoLancamento, int tempoDeAudio){
+        super(nome, anoLancamento, tempoDeAudio);
+        this.album = album;
+        this.artista = artista;
+        this.genero = genero;
     }
 
-    public void setAlbum(String album) {
-        this.album = album;
+    public String getAlbum() {
+        return album;
     }
 
     public String getArtista() {
         return artista;
     }
 
-    public void setArtista(String artista) {
-        this.artista = artista;
-    }
-
     public String getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
 
     @Override
     public int getClassificacao() {
@@ -58,7 +55,7 @@ public class Musica extends Audio implements Classificavel, Informacoes {
         System.out.println("Ano de lançamento: " + getAnoLancamento());
         System.out.println("Curtida: " + getTotalCurtidas());
         System.out.println("Reproduções: " + getTotalReproducao());
-        System.out.println("Tempo de música: " + getTempoRestante() + " minutos");
+        System.out.println("Tempo de música: " + getTempoDeAudio() + " minutos");
     }
 
     @Override
