@@ -9,20 +9,19 @@ public class Podcast extends Audio implements Classificavel, Informacoes {
     private String descricao;
 
 
+    public Podcast(String nome, String host, String descricao, int anoLancamento, int tempoDeAudio) {
+        super(nome, anoLancamento, tempoDeAudio);
+        this.host = host;
+        this.descricao = descricao;
+    }
+
+
     public String getHost() {
         return host;
     }
 
-    public void setHost(String host) {
-        this.host = host;
-    }
-
     public String getDescricao() {
         return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
 
 
@@ -49,7 +48,7 @@ public class Podcast extends Audio implements Classificavel, Informacoes {
         System.out.println("Ano de lançamento: " + getAnoLancamento());
         System.out.println("Curtida: " + getTotalCurtidas());
         System.out.println("Reproduções: " + getTotalReproducao());
-        System.out.println("Tempo de podcast: " + getTempoRestante() + " minutos");
+        System.out.println("Tempo de podcast: " + getTempoDeAudio() + " minutos");
 
     }
 

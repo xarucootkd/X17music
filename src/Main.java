@@ -24,14 +24,7 @@ public class Main {
 
 
 
-        Musica musica = new Musica();
-
-        musica.setNome("Esferas do Dragão");
-        musica.setAlbum("Single");
-        musica.setArtista("7MZ");
-        musica.setGenero("Anime");
-        musica.setAnoLancamento(2021);
-        musica.setTempoRestante(2);
+        Musica musica = new Musica("Esferas do Dragão", "Single", "7MZ", "Anime", 2021, 2);
         musica.setAvaliacao(9.0);
         musica.setAvaliacao(8);
         musica.setAvaliacao(10);
@@ -58,13 +51,7 @@ public class Main {
         limparTela();
 
 
-        Podcast podcast = new Podcast();
-
-        podcast.setNome("LudoCast");
-        podcast.setHost("Ludoviajante");
-        podcast.setDescricao("Podcast sobre filosofia e ciência");
-        podcast.setAnoLancamento(2025);
-        podcast.setTempoRestante(50);
+        Podcast podcast = new Podcast("LudoCast", "Ludoviajante", "Podcast sobre filosofia e ciência", 2025, 50);
         podcast.setAvaliacao(3);
         podcast.setAvaliacao(3);
         podcast.setAvaliacao(3);

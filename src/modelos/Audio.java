@@ -5,12 +5,19 @@ public class Audio {
 
     private String nome;
     private int classificacao;
-    private int tempoRestante; // em minutos
+    private int tempoDeAudio; // em minutos
     private int anoLancamento;
     private int totalReproducao;
     private int totalAvaliacao;
     private int totalCurtidas;
     private double avaliacao;
+
+
+    public Audio(String nome, int anoLancamento, int tempoDeAudio) {
+        this.nome = nome;
+        this.anoLancamento = anoLancamento;
+        this.tempoDeAudio = tempoDeAudio;
+    }
 
 
     public int getClassificacao() {
@@ -21,24 +28,12 @@ public class Audio {
         return anoLancamento;
     }
 
-    public void setAnoLancamento(int anoLancamento) {
-        this.anoLancamento = anoLancamento;
-    }
-
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getTempoRestante() {
-        return tempoRestante;
-    }
-
-    public void setTempoRestante(int tempoRestante) {
-        this.tempoRestante = tempoRestante;
+    public int getTempoDeAudio() {
+        return tempoDeAudio;
     }
 
     public String getAvaliacao() {
