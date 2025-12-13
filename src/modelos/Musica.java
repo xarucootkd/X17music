@@ -55,7 +55,7 @@ public class Musica extends Audio implements Classificavel, Informacoes {
         System.out.println("Ano de lançamento: " + getAnoLancamento());
         System.out.println("Curtida: " + getTotalCurtidas());
         System.out.println("Reproduções: " + getTotalReproducao());
-        System.out.println("Tempo de música: " + getTempoDeAudio() + " minutos");
+        System.out.println("Duração: " + getTempoDeAudio() + " minutos");
     }
 
     @Override
@@ -65,4 +65,18 @@ public class Musica extends Audio implements Classificavel, Informacoes {
         """);
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                "'nome:' " + "'" + getNome() +"'" + "," +
+                "'album:' " + "'" + getAlbum() + "'" + "," +
+                "'artista:' " + "'" + getArtista() + "'" + ',' +
+                "'genero:' " + "'" + getGenero() + "'" + "," +
+                "'avaliacao:' " + "'" + getAvaliacao() + "'" + "," +
+                "'lancamento:' " + "'" + getAnoLancamento() + "'" + "," +
+                "'curtidas:' " + "'" + getTotalCurtidas() + "'" + "," +
+                "'reproducao:' " + "'" + getTotalReproducao() + "'" + "," +
+                "'duracao:' " + "'" + getTempoDeAudio() + "'" + "," +
+                "}";
+    }
 }
