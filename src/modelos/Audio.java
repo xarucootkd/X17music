@@ -37,9 +37,10 @@ public class Audio {
     }
 
     public String getAvaliacao() {
-       double nota = avaliacao / totalAvaliacao;
+       double media = avaliacao / totalAvaliacao;
+       double nota = media / 2;
 
-       if (nota == 0 ) {
+       if (nota == 0) { // BUG NESSA PARTE DO CODIGO, ESTÁ RETORNANDO 5 ESTRELAS MESMO NÃO TENDO NOTA NENHUMA
            return "Não tem nenhuma avaliação";
        } else if (nota < 1.5) {
            return "★ ✩ ✩ ✩ ✩";

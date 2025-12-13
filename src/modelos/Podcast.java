@@ -48,7 +48,7 @@ public class Podcast extends Audio implements Classificavel, Informacoes {
         System.out.println("Ano de lançamento: " + getAnoLancamento());
         System.out.println("Curtida: " + getTotalCurtidas());
         System.out.println("Reproduções: " + getTotalReproducao());
-        System.out.println("Tempo de podcast: " + getTempoDeAudio() + " minutos");
+        System.out.println("Duração: " + getTempoDeAudio() + " minutos");
 
     }
 
@@ -57,5 +57,10 @@ public class Podcast extends Audio implements Classificavel, Informacoes {
         System.out.println("""
             ᆞP o d c a s t sᆞ
         """);
+    }
+
+    @Override
+    public String toString() {
+        return "Olá";
     }
 }

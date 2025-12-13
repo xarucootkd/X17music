@@ -1,8 +1,12 @@
+package principal;
+
 import classes_extras.EmAlta;
 import classes_extras.Exibir;
 import classes_extras.MaisRecentes;
 import modelos.Musica;
 import modelos.Podcast;
+
+import java.util.ArrayList;
 
 
 public class Main {
@@ -48,6 +52,11 @@ public class Main {
         filtroEmAlta.emAlta(musica);
 
 
+        Musica musica1 = new Musica("Harlequin", "Single", "VMZ", "Anime", 2020, 2);
+        musica1.setAvaliacao(5);
+        musica1.setAvaliacao(8);
+        musica1.setAvaliacao(3);
+
         limparTela();
 
 
@@ -75,8 +84,15 @@ public class Main {
         podcast.getClassificacao();
         filtroEmAlta.emAlta(podcast);
 
+        ArrayList<Musica> listaDeMusica = new ArrayList<>();
 
+        listaDeMusica.add(musica);
+        listaDeMusica.add(musica1);
 
+        System.out.println("tamanho da lista de música: " + listaDeMusica.size());
+        System.out.println("Nome da primeira Musica: " + listaDeMusica.get(0).getNome());
+
+        System.out.println(listaDeMusica);
 
     }
 
